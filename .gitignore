@@ -1,0 +1,57 @@
+# Python environments, caches, and coverage output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Local credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+configs/paths.wsl.json
+configs/paths.local.json
+*.local.json
+
+# Workstation tools, office profiles, and temporary QA renders
+.tools/
+.tmp*/
+tmp/
+**/.tmp*/
+**/.qa*/
+**/.lo_profile*/
+**/node_modules/
+*.inspect.ndjson
+*.log
+~$*
+.DS_Store
+
+# Generated office documents are release outputs, not source inputs.
+*.docx
+*.pptx
+
+# Keep local publication working trees and generated figure assets out of Git.
+/figures/
+/manuscript/
+/AGENTS.md
+/scripts/admin_*.ps1
+/scripts/reset_wsl_gpu_stack.ps1
+
+# Do not redistribute licensed raw judgments or large batch trees.
+data/raw/
+data/full_outputs/
+artifacts/
+
+# Local-only derived records. These may contain licensed per-record fields or
+# machine-specific runtime metadata.
+/results/*_manifest.jsonl
+/results/*_data_audit.json
+/results/stage_*_summary.json
+/configs/*_candidate_suggestions.json
+
+# PDFs are generated locally.
+*.pdf

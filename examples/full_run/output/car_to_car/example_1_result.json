@@ -1,0 +1,22 @@
+{
+  "input_file": "example_1.json",
+  "source_text": "교차로에서 피고차량의 앞부분으로 원고차량의 뒷부분을 충격하였다.",
+  "parsed": {
+    "accident_datetime": null,
+    "location": "교차로",
+    "weather_or_environment": null,
+    "road_type": "교차로",
+    "vehicle_type": "피고차량, 원고차량",
+    "blood_alcohol_content": null,
+    "accident_trajectory": "피고차량이 원고차량을 충격",
+    "casualty_result": null
+  },
+  "postprocess": {
+    "rule": {
+      "label": "car_to_car",
+      "score": 20,
+      "reason": ["synthetic two-vehicle collision example"]
+    },
+    "llm": null
+  }
+}

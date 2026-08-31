@@ -1,0 +1,50 @@
+{
+  "baseline": {
+    "total": 76291,
+    "final_car_to_car": 2902,
+    "final_not_car_to_car": 72653,
+    "final_unresolved": 736,
+    "invariant_2902_plus_72653_plus_736": true
+  },
+  "gold_kit": {
+    "total": 900,
+    "seed": 20260728,
+    "tasks_sha256": "bee44e7681e8be21f60ac7148013f5ab5f0a6d25c975064480d1aea6bea34ea0",
+    "human_labels_complete": false,
+    "metrics_generated": false
+  },
+  "evidence_graph": {
+    "total": 400,
+    "exact_evidence_span": 400,
+    "span_error_count": 0,
+    "span_errors": []
+  },
+  "scenario_contract": {
+    "total": 400,
+    "needs_defaults": 104,
+    "needs_review": 189,
+    "blocked": 107,
+    "tier_c": 100,
+    "tier_c_auto_promotion_count": 0,
+    "tier_c_auto_promotions": []
+  },
+  "dry_run": {
+    "total": 200,
+    "strict_not_executed": 200,
+    "checksum_error_count": 0,
+    "checksum_errors": [],
+    "execution_state_error_count": 0,
+    "execution_state_errors": []
+  },
+  "acceptance": {
+    "baseline_invariant": true,
+    "graph_400_crash_zero_and_schema_pass": true,
+    "observed_evidence_span_100_percent": true,
+    "contract_400_schema_pass": true,
+    "tier_c_not_auto_promoted": true,
+    "dry_run_200_bundled": true,
+    "dry_run_200_not_executed": true,
+    "bundle_checksums_valid": true,
+    "gold_metrics_withheld_until_labels": true
+  }
+}

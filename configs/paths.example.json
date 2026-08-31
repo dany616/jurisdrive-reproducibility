@@ -1,0 +1,7 @@
+{
+  "workspace_root": "..",
+  "raw_dir": "../LocalLLM/zeroshot_test/inputs/raw",
+  "zeroshot_dir": "../LocalLLM/zeroshot_test/outputs/zeroshot_done",
+  "full_run_dir": "../LocalLLM/zeroshot_test/pipelines/car_to_car_filter/full_run",
+  "artifact_root": "artifacts"
+}

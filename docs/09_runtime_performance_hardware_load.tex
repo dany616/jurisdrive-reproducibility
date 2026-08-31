@@ -1,0 +1,48 @@
+% Paper-ready subsection derived from the timestamped 200-run benchmark:
+% artifacts/migration_runs/20260811_000915/runtime_benchmark_200
+
+\subsection{Runtime Performance and Hardware Load}
+
+All N5--N6 runtime measurements were obtained on a workstation containing two
+Intel Xeon Gold 6530 processors (64 physical cores and 128 logical processors
+in total), 512~GB of installed host memory (251.379~GiB visible to the
+benchmark under WSL), and two NVIDIA RTX PRO 4500 Blackwell GPUs with
+32,623~MiB per device. The software environment comprised
+Ubuntu 24.04.4 LTS under WSL2, Python 3.12.3, CARLA 0.9.13, CUDA 13.0.2, and
+vLLM 0.23.0. Qwen3.5-35B-A3B-FP8 was served with tensor parallelism two, a
+32,768-token context window, and a maximum of eight active sequences.
+
+We balanced six accepted executable contracts across 200 measured CARLA runs
+and evaluated the same 200 artifacts with N6. CARLA used 12 scenario-isolated
+server processes, synchronous 0.05-s stepping, low-quality off-screen
+rendering, 800$\times$450 RGB capture, and 80 or 120 frames depending on the
+contract. All 200 runs completed and satisfied the hard collision constraints.
+The measured phase required 91.78~min, corresponding to 2.179 runs/min; mean
+and P95 per-run latency were 224.74 and 343.27~s.
+
+For N6, 30 sequential requests yielded mean/P95 latency of 1.93/2.36~s. The
+remaining 170 requests were issued asynchronously at concurrency eight and
+achieved 1.320 requests/s and 5,402.6 tokens/s, with mean/P95 latency of
+6.01/7.42~s. All 200 evaluations passed, with no manual-review flag.
+
+Across 1,166 resource samples collected during CARLA execution, mean/P95/peak
+host CPU utilization was 19.45/21.15/28.19\%. Aggregate CARLA process load
+averaged 2,303.84\% of one logical processor, or 23.04 logical-core equivalents.
+CARLA resident-set memory averaged 37.78~GiB and peaked at 45.70~GiB; total
+host-memory use averaged 54.50~GiB (21.68\% of the WSL-visible allocation) and
+peaked at 57.34~GiB (22.81\%). Mean GPU utilization remained below 0.03\%
+during low-quality off-screen simulation.
+
+The VLM phase showed the opposite profile. Across 36 samples, mean GPU
+utilization was 66.19\% and 68.75\%, P95 utilization was 96\% on both devices,
+and peak utilization was 99\% and 97\%. Mean memory allocation was 28.67~GiB
+(89.99\%) and 28.26~GiB (88.71\%), while mean device power was 113.25 and
+107.94~W. Host CPU utilization averaged only 2.95\%, and host-memory use
+averaged 18.87~GiB (7.51\%). Thus, the 12-worker simulator is primarily
+CPU- and host-memory-oriented, whereas N6 throughput is constrained by GPU
+compute and memory occupancy.
+
+CARLA server startup, map warm-up, and six VLM warm-ups were excluded from
+measured latency. The cached VLM service restart required 293.43~s and was also
+excluded. These values therefore characterize steady-state N5--N6 throughput,
+not cold-start latency or an end-to-end N0--N6 rerun.

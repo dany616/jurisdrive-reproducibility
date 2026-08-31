@@ -1,0 +1,10 @@
+stage,count,percent_of_total
+zeroshot_input,76291,100.000
+rule_car_to_car,2471,3.239
+rule_not_car_to_car,71296,93.453
+routed_to_llm,2524,3.308
+llm_car_to_car,431,0.565
+llm_not_car_to_car,1357,1.779
+llm_unresolved,736,0.965
+final_car_to_car,2902,3.804
+minimum_grounded,2370,3.107

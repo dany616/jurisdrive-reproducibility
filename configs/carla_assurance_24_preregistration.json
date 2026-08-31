@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "experiment_id": "jurisdrive_unique24_assurance_v1",
+  "selection_frozen": false,
+  "frozen_at_utc": null,
+  "base_seed": 20260823,
+  "max_repair_iterations": 3,
+  "notes": [
+    "This file preregisters strata and routes only; candidate IDs remain pending human topology confirmation.",
+    "Set selection_frozen=true only after all 24 IDs, contract paths, and topology checks are complete; clean bundle paths become available after fidelity execution.",
+    "The existing six-scenario 200-run runtime benchmark is not part of this denominator."
+  ],
+  "cases": [
+    {"slot_id":"rear_end_r01","candidate_id":null,"scenario_id":null,"topology":"rear_end","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"rear_end_r02","candidate_id":null,"scenario_id":null,"topology":"rear_end","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"rear_end_r03","candidate_id":null,"scenario_id":null,"topology":"rear_end","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"rear_end_q01","candidate_id":null,"scenario_id":null,"topology":"rear_end","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"rear_end_q02","candidate_id":null,"scenario_id":null,"topology":"rear_end","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"rear_end_q03","candidate_id":null,"scenario_id":null,"topology":"rear_end","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"intersection_r01","candidate_id":null,"scenario_id":null,"topology":"intersection_crossing_turning","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"intersection_r02","candidate_id":null,"scenario_id":null,"topology":"intersection_crossing_turning","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"intersection_r03","candidate_id":null,"scenario_id":null,"topology":"intersection_crossing_turning","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"intersection_q01","candidate_id":null,"scenario_id":null,"topology":"intersection_crossing_turning","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"intersection_q02","candidate_id":null,"scenario_id":null,"topology":"intersection_crossing_turning","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"intersection_q03","candidate_id":null,"scenario_id":null,"topology":"intersection_crossing_turning","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"lane_change_r01","candidate_id":null,"scenario_id":null,"topology":"lane_change_side_swipe","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"lane_change_r02","candidate_id":null,"scenario_id":null,"topology":"lane_change_side_swipe","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"lane_change_r03","candidate_id":null,"scenario_id":null,"topology":"lane_change_side_swipe","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"lane_change_q01","candidate_id":null,"scenario_id":null,"topology":"lane_change_side_swipe","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"lane_change_q02","candidate_id":null,"scenario_id":null,"topology":"lane_change_side_swipe","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"lane_change_q03","candidate_id":null,"scenario_id":null,"topology":"lane_change_side_swipe","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"head_on_r01","candidate_id":null,"scenario_id":null,"topology":"head_on_centerline_intrusion","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"head_on_r02","candidate_id":null,"scenario_id":null,"topology":"head_on_centerline_intrusion","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"head_on_r03","candidate_id":null,"scenario_id":null,"topology":"head_on_centerline_intrusion","source_stage":"rule","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"head_on_q01","candidate_id":null,"scenario_id":null,"topology":"head_on_centerline_intrusion","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"head_on_q02","candidate_id":null,"scenario_id":null,"topology":"head_on_centerline_intrusion","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null},
+    {"slot_id":"head_on_q03","candidate_id":null,"scenario_id":null,"topology":"head_on_centerline_intrusion","source_stage":"qwen","human_topology_confirmed":false,"contract_path":null,"clean_bundle_path":null}
+  ]
+}

@@ -1,0 +1,21 @@
+version: "1.0"
+map_catalog:
+  intersection: Town05
+  multi_lane: Town04
+  straight_road: Town01
+  unknown: Town01
+blueprint_fallbacks:
+  truck: vehicle.carlamotors.carlacola
+  bus: vehicle.mitsubishi.fusorosa
+  suv: vehicle.nissan.patrol
+  generic: vehicle.tesla.model3
+simulation:
+  fixed_delta_seconds: 0.05
+  duration_seconds: 20.0
+  telemetry_hz: 20
+  spawn_gap_meters: 20.0
+  seed: 20260728
+sensors:
+  collision: true
+  rgb: true
+  semantic_segmentation: false

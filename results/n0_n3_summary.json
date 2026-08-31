@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "scope": "Path-free aggregate snapshot; licensed and per-record artifacts are not redistributed.",
+  "generated_at": "2026-07-27T20:01:17+00:00",
+  "counts": {
+    "raw_records": 76291,
+    "zeroshot_records": 76291,
+    "rule_car_to_car": 2471,
+    "rule_not_car_to_car": 71296,
+    "routed_to_llm": 2524,
+    "llm_car_to_car": 431,
+    "llm_not_car_to_car": 1357,
+    "llm_unresolved": 736,
+    "final_car_to_car": 2902,
+    "final_not_car_to_car": 72653,
+    "final_unresolved": 736
+  },
+  "rates_percent_of_total": {
+    "routed_to_llm": 3.308,
+    "final_car_to_car": 3.804,
+    "final_not_car_to_car": 95.231,
+    "final_unresolved": 0.965
+  },
+  "rates_percent_of_routed": {
+    "llm_car_to_car": 17.076,
+    "llm_not_car_to_car": 53.764,
+    "llm_unresolved": 29.16
+  },
+  "candidate_source_stage": {
+    "rule": 2471,
+    "llm": 431
+  },
+  "candidate_field_coverage": {
+    "accident_datetime": {"count": 2426, "percent": 83.6},
+    "location": {"count": 2581, "percent": 88.94},
+    "weather_or_environment": {"count": 272, "percent": 9.37},
+    "road_type": {"count": 1729, "percent": 59.58},
+    "vehicle_type": {"count": 2582, "percent": 88.97},
+    "blood_alcohol_content": {"count": 171, "percent": 5.89},
+    "accident_trajectory": {"count": 2820, "percent": 97.17},
+    "casualty_result": {"count": 1739, "percent": 59.92}
+  },
+  "scenario_contract_readiness": {
+    "A_minimum_grounded": {"count": 2370, "percent": 81.67},
+    "B_defaults_needed": {"count": 201, "percent": 6.93},
+    "C_reextract_or_review": {"count": 331, "percent": 11.41}
+  },
+  "llm_candidate_distribution": {
+    "confidence": {"high": 423, "medium": 8},
+    "accident_type": {"car_to_car": 431}
+  },
+  "integrity_checks": {
+    "raw_equals_zeroshot": true,
+    "zeroshot_equals_rule_input": true,
+    "rule_branches_sum_to_total": true,
+    "llm_branches_sum_to_routed": true,
+    "final_branches_sum_to_total": true,
+    "candidate_manifest_matches_final_car_count": true
+  },
+  "private_artifact_verification": {
+    "candidate_manifest": {
+      "rows": 2902,
+      "sha256": "78c3eaf1cf28da99d5e47827ffbb8fc1fba9dba5f7667cad66a35d2b28c67c9c"
+    },
+    "rule_summary": {
+      "sha256": "324949c3318259eb6c6bc16125b742f9e130fa38d0e5d5fb2889c2bd84d5410b"
+    },
+    "llm_summary": {
+      "sha256": "4e88e2d56d87e236909bf191c7ef971f7427ba65f2a161a4b7807fa4a3554621"
+    }
+  }
+}

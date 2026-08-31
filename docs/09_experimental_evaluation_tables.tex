@@ -1,0 +1,131 @@
+% JurisDrive Section VII tables. N0--N4 and gold-set values are traceable to
+% the 20260805_033451 evaluation artifact; Table V is traceable to the
+% 20260811_000915/runtime_benchmark_200 artifact.
+
+\begin{table}[t]
+\caption{Frozen N0--N3 Cascade Counts}
+\label{tab:cascade}
+\centering
+\begin{tabular}{lrr}
+\hline
+Stage or branch & Records & Corpus share (\%) \\
+\hline
+Structured judgments & 76,291 & 100.000 \\
+Rule: car-to-car & 2,471 & 3.239 \\
+Rule: not car-to-car & 71,296 & 93.453 \\
+Routed to Qwen & 2,524 & 3.308 \\
+Qwen: car-to-car & 431 & 0.565 \\
+Qwen: not car-to-car & 1,357 & 1.779 \\
+Qwen: unresolved & 736 & 0.965 \\
+Final car-to-car & 2,902 & 3.804 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Static Grounding and Compilation Checks}
+\label{tab:static-validation}
+\centering
+\begin{tabular}{lrrr}
+\hline
+Check & $n$ & Passed & Rate (\%) \\
+\hline
+Graph schema/crash-free & 400 & 400 & 100.0 \\
+Exact source-span containment & 400 & 400 & 100.0 \\
+Contract schema & 400 & 400 & 100.0 \\
+Tier-C auto-promotion prevented & 100 & 100 & 100.0 \\
+Dry-run strict not-executed & 200 & 200 & 100.0 \\
+Dry-run checksum validity & 200 & 200 & 100.0 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table*}[t]
+\caption{Workstation Asynchronous Scaling on the Fixed 16-Case Workload}
+\label{tab:async-scaling}
+\centering
+\begin{tabular}{rrrrrr}
+\hline
+Concurrency & Wall time (s) & Throughput (req/s) & Mean latency (s) & P95 latency (s) & Speedup \\
+\hline
+1 & 43.223 & 0.370 & 2.664 & 3.425 & 1.00$\times$ \\
+2 & 25.356 & 0.631 & 3.120 & 4.043 & 1.71$\times$ \\
+4 & 15.656 & 1.022 & 3.637 & 4.738 & 2.76$\times$ \\
+8 & 11.522 & 1.389 & 5.078 & 7.371 & 3.75$\times$ \\
+16 & 11.054 & 1.448 & 7.911 & 10.462 & 3.91$\times$ \\
+\hline
+\end{tabular}
+\end{table*}
+
+\begin{table}[t]
+\caption{Archived Supercomputer Structured-Output Scaling}
+\label{tab:hpc-scaling}
+\centering
+\begin{tabular}{rrrr}
+\hline
+Concurrency & Requests & Wall time (s) & Throughput (req/s) \\
+\hline
+16 & 200 & 133.31 & 1.500 \\
+32 & 200 & 92.68 & 2.158 \\
+64 & 200 & 92.46 & 2.163 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table*}[t]
+\caption{Hardware Load and Runtime for the 400-Request Run}
+\label{tab:hardware-runtime}
+\centering
+\begin{tabular}{lrrrrrr}
+\hline
+Workload & Success & Time (s) & Req/s & GPU util. mean/P95 & GPU mem. mean/peak & CPU mean/peak \\
+\hline
+Async classifier, $c=8$ & 400/400 & 274.892 & 1.455 & 61.42/90.00\% & 88.43/92.66\% & 3.11/5.00\% \\
+\hline
+\end{tabular}
+\end{table*}
+
+\begin{table}[t]
+\caption{200-Run CARLA and N6 VLM Runtime Benchmark}
+\label{tab:carla-vlm}
+\centering
+\begin{tabular}{lr}
+\hline
+Measure & Result \\
+\hline
+Unique executable scenarios & 6 \\
+CARLA runs / N6 evaluations & 200/200 \\
+Simulation/hard-constraint pass & 200/200 \\
+CARLA wall-clock (12 workers) & 91.78 min \\
+CARLA latency, mean/P95 & 224.74/343.27 s \\
+CARLA throughput & 2.179 runs/min \\
+N6 pass/manual-review flags & 200/200 / 0 \\
+Sequential VLM latency, mean/P95 & 1.93/2.36 s \\
+Async. VLM latency, mean/P95 & 6.01/7.42 s \\
+Async. VLM throughput & 1.320 req/s \\
+Async. token throughput & 5,402.6 tokens/s \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Gold-Set Composition and Current Status}
+\label{tab:gold-set}
+\centering
+\begin{tabular}{lrrl}
+\hline
+Stratum & Population & Sample & Human labels \\
+\hline
+Rule ACCEPT & 2,471 & 200 & Pending \\
+Rule REJECT & 71,296 & 200 & Pending \\
+Qwen ACCEPT & 431 & 150 & Pending \\
+Qwen REJECT & 1,357 & 150 & Pending \\
+Unresolved & 736 & 200 & Pending \\
+\hline
+Total & 76,291 & 900 & 0/900 adjudicated \\
+\hline
+\end{tabular}
+\end{table}
+
+% Comparator readiness (not accuracy): rule-only 400/900 covered, hybrid
+% 700/900 covered, and Qwen-only 803/900 covered with 97 abstentions.

@@ -1,0 +1,5 @@
+-r requirements-lock.txt
+
+# Publication-figure generation
+matplotlib==3.11.1
+numpy==2.5.1
